@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script>
+        var app = angular.module('myapp', ['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider.when('/about1', {
+                templateUrl: 'about1.html'
+            })
+            .when('/2087', {
+                templateUrl: '2087.html'
+            })
+            .when('/2082', {
+                templateUrl: '2082.html'
+            })
+            .when('/2099', {
+                templateUrl: '2099.html'
+            })
+            .when('/1020', {
+                templateUrl: '1020.html'
+            })
+        });
+    </script>
+</head>
+<body ng-app="myapp">
+    <h1>Profiles</h1>
+    <hr>
+    <div class="sidebar">
+        <a href="#!about1">About</a>
+        <a href="#!2087">URK20CS2087</a>
+        <a href="#!2082">URK20CS2082</a>
+        <a href="#!2099">URK20CS2099</a>
+        <a href="#!1020">URK20CS1020</a>
+    </div>
+    <div class="content" ng-view>
+
+    </div>
+</body>
+</html>
